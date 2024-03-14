@@ -63,33 +63,39 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-def frontendDir = "$projectDir/src/main/frontend"
+
+
+def reactAppDir = "$projectDir/src/main/frontend"
 
 sourceSets {
     main {
-        resources { srcDirs = ["$projectDir/src/main/resources"]
+        resources { 
+        	srcDirs = ["$projectDir/src/main/resources"]
         }
     }
 }
 
-processResources { dependsOn "copyReactBuildFiles" }
+processResources { 
+	dependsOn "copyReactFile" 
+}
 
 task installReact(type: Exec) {
-    workingDir "$frontendDir"
-    inputs.dir "$frontendDir"
+    workingDir "$reactAppDir"
+    inputs.dir "$reactAppDir"
     group = BasePlugin.BUILD_GROUP
     if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
         commandLine "npm.cmd", "audit", "fix"
-        commandLine 'npm.cmd', 'install' }
-    else {
-        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
+        commandLine 'npm.cmd', 'install' 
+    } else {
+        commandLine "npm", "audit", "fix"
+        commandLine 'npm', 'install'
     }
 }
 
 task buildReact(type: Exec) {
     dependsOn "installReact"
-    workingDir "$frontendDir"
-    inputs.dir "$frontendDir"
+    workingDir "$reactAppDir"
+    inputs.dir "$reactAppDir"
     group = BasePlugin.BUILD_GROUP
     if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
         commandLine "npm.cmd", "run-script", "build"
@@ -98,8 +104,8 @@ task buildReact(type: Exec) {
     }
 }
 
-task copyReactBuildFiles(type: Copy) {
+task copyReactFile(type: Copy) {
     dependsOn "buildReact"
-    from "$frontendDir/build"
-    into "$projectDir/src/main/resources/static"
+    from "$reactAppDir/build"
+    into "$buildDir/resources/main/static"
 }
