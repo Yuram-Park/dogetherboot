@@ -1,26 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d0bf546.css",
-    "main.js": "/static/js/main.aa2f0d8f.js",
-    "static/media/Cafe2.jpg": "/static/media/Cafe2.8631406b5549232a6c84.jpg",
-    "static/media/Cafe1.jpg": "/static/media/Cafe1.1ce3db0a94f2bea0b147.jpg",
-    "static/media/Cafe8.jpg": "/static/media/Cafe8.d5de10821b1bf36235a7.jpg",
-    "static/media/Cafe9.jpg": "/static/media/Cafe9.9137a5cb09f2452010ca.jpg",
-    "static/media/Cafe3.jpg": "/static/media/Cafe3.6bd60b50bad749945c24.jpg",
-    "static/media/Cafe6.jpg": "/static/media/Cafe6.9a7ceb94aded8fea5582.jpg",
-    "static/media/Cafe10.jpg": "/static/media/Cafe10.45f10f4b4361e1340531.jpg",
-    "static/media/Cafe5.jpg": "/static/media/Cafe5.8e4a149e2ef2af8a01b8.jpg",
-    "static/media/logo.jpeg": "/static/media/logo.761ce4fd22e63c4e7bd8.jpeg",
-    "static/media/Cafe4.jpg": "/static/media/Cafe4.647d7571c6a67859219e.jpg",
-    "static/media/Kakao.png": "/static/media/Kakao.f3c76effeae07c43f359.png",
-    "static/media/Google.png": "/static/media/Google.97ed41e182aeae4e20c2.png",
-    "static/media/Cafe7.jpg": "/static/media/Cafe7.8271ade31ea1d11af8c1.jpg",
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.677742e7.js",
+    "static/js/787.9e9f4ffd.chunk.js": "/static/js/787.9e9f4ffd.chunk.js",
     "index.html": "/index.html",
-    "main.9d0bf546.css.map": "/static/css/main.9d0bf546.css.map",
-    "main.aa2f0d8f.js.map": "/static/js/main.aa2f0d8f.js.map"
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.677742e7.js.map": "/static/js/main.677742e7.js.map",
+    "787.9e9f4ffd.chunk.js.map": "/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d0bf546.css",
-    "static/js/main.aa2f0d8f.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.677742e7.js"
   ]
 }
