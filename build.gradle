@@ -82,7 +82,8 @@ task installReact(type: Exec) {
         commandLine "npm.cmd", "audit", "fix"
         commandLine 'npm.cmd', 'install' }
     else {
-        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
+        commandLine "npm", "audit", "fix" 
+        commandLine 'npm', 'install'
     }
 }
 
@@ -101,5 +102,5 @@ task buildReact(type: Exec) {
 task copyReactBuildFiles(type: Copy) {
     dependsOn "buildReact"
     from "$frontendDir/build"
-    into "$projectDir/src/main/resources/static"
+    into "$buildDir/resources/main/static"
 }

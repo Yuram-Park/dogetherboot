@@ -16,13 +16,13 @@ function Index() {
 
   useEffect(() => {
     const getPostList = async () => {
-      const resp = await axios.get("/dog/post/mainList/news/promotion")
+      const resp = await axios.get(process.env.REACT_APP_DB_HOST + "/dog/post/mainList/news/promotion")
       setNewsList(resp.data.newsList);
       setPromotionList(resp.data.promotionList);
     }
     getPostList();
     const getPlaceCount = async () => {
-      const resp = await axios.get(`/dog/place/count`);
+      const resp = await axios.get(process.env.REACT_APP_DB_HOST + `/dog/place/count`);
       setPlaceCount(prev => resp.data);
     }
     getPlaceCount();
